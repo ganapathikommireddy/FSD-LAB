@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Examples - Tables, Forms, Frames</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        section { margin-bottom: 50px; }
+        h2 { color: darkblue; }
+        table { border-collapse: collapse; }
+        td, th { border: 1px solid #000; padding: 8px; }
+        iframe { width: 100%; border: 1px solid #000; }
+    </style>
+</head>
+<body>
+
+    
+    <section>
+        <h2>Basic Table with rowspan and colspan</h2>
+        <table border="1">
+            <tr>
+                <th>Name</th>
+                <th colspan="2">Contact Info</th>
+            </tr>
+            <tr>
+                <td rowspan="2">ganapathi</td>
+                <td>Email</td>
+                <td>ganapathi@example.com</td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td>9637451230</td>
+            </tr>
+        </table>
+    </section>
+
+    <
+    <section>
+        <h2>Weekly Class Timetable</h2>
+        <table border="1" cellspacing="5" cellpadding="10">
+            <caption><strong>Weekly Class Timetable</strong></caption>
+            <tr>
+                <th>Day</th>
+                <th>Period 1</th>
+                <th>Period 2</th>
+                <th>Break</th>
+                <th>Period 3</th>
+                <th>Period 4</th>
+            </tr>
+            <tr>
+                <td>Monday</td>
+                <td>FSD</td>
+                <td>FSD-LAB</td>
+                <td rowspan="5">11:00 - 1:00</td>
+                <td>DWDM</td>
+                <td>AT&CD</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>AT&CD</td>
+                <td>AOR</td>
+                <td>CN-LAB</td>
+                <td>Sports</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td colspan="2">AJ-Lab</td>
+                <td>AJ</td>
+                <td>CN</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>COMMUNICATION SKILL</td>
+                <td>AOR</td>
+                <td>AT&CD</td>
+                <td>DWDM</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>APPLITUDE</td>
+                <td>AJ</td>
+                <td>AOR</td>
+                <td>CN</td>
+            </tr>
+        </table>
+    </section>
+
+    
+    <section>
+        <h2>Registration Form</h2>
+        <form>
+            <table border="1" cellpadding="10" cellspacing="5">
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" name="name" required></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="password" name="password" required></td>
+                </tr>
+                <tr>
+                    <td>Age:</td>
+                    <td><input type="number" name="age"></td>
+                </tr>
+                <tr>
+                    <td>Date of Birth:</td>
+                    <td><input type="date" name="dob"></td>
+                </tr>
+                <tr>
+                    <td>Gender:</td>
+                    <td>
+                        <input type="radio" name="gender" value="male"> Male
+                        <input type="radio" name="gender" value="female"> Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hobbies:</td>
+                    <td>
+                        <input type="checkbox" name="hobbies" value="reading"> Reading
+                        <input type="checkbox" name="hobbies" value="sports"> Sports
+                        <input type="checkbox" name="hobbies" value="music"> Music
+                        <input type="checkbox" name="hobbies" value="Dancing">Dancing
+                    </td>
+                </tr>
+                <tr>
+                    <td>Course:</td>
+                    <td>
+                        <select name="course">
+                            <option value="btech">BTech</option>
+                            <option value="bcom">B.Com</option>
+                            <option value="bsc">B.Sc</option>
+                            <option value="mtech">MTech</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Address:</td>
+                    <td><textarea name="address" rows="4" cols="30"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="Register">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </section>
+
+    
+    <section>
+        <h2>Frames (Using Iframes)</h2>
+        <h3>Image Frame</h3>
+        <iframe srcdoc='
+            <html><body>
+                <img src="https://via.placeholder.com/300x100" alt="Sample Image">
+            </body></html>
+        ' height="120"></iframe>
+
+        <h3>Paragraph Frame</h3>
+        <iframe srcdoc='
+            <html><body>
+                <p>This is a paragraph explaining the concept of frames. Frames allow embedding of multiple views in one page.</p>
+            </body></html>
+        ' height="100"></iframe>
+
+        <h3>Link Frame</h3>
+        <iframe srcdoc='
+            <html><body>
+                <a href="https://www.example.com" target="_blank">Visit Example.com</a>
+            </body></html>
+        ' height="60"></iframe>
+    </section>
+
+</body>
+</html>
