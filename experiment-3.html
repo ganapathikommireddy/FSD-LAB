@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Tags, Media, and Styling</title>
+
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+        header {
+            background-color: #005f73;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav {
+            background-color: #0a9396;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #e9d8a6;
+        }
+        article {
+            background-color: #fff;
+            padding: 10px;
+            border-left: 4px solid #ca6702;
+        }
+        aside {
+            background-color: #94d2bd;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        footer {
+            background-color: #005f73;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+        /* Simulating external CSS
+        In actual projects, link to a .css file like:
+        <link rel="stylesheet" href="styles.css">
+        */
+    </style>
+</head>
+<body>
+
+
+    <header>
+        <h1>Welcome to My Web Page</h1>
+    </header>
+
+    
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#media">Media</a>
+        <a href="#content">Content</a>
+    </nav>
+
+    
+    <main>
+
+        
+        <section>
+            <h2>About This Page</h2>
+
+            <article>
+                <h3>HTML Semantic Elements</h3>
+                <p>This page demonstrates various HTML semantic elements such as <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;figure&gt;</code>, and more.</p>
+                <p><span class="highlight">Note:</span> Semantic tags improve accessibility and SEO.</p>
+            </article>
+
+            <aside>
+                <p><strong>Tip:</strong> Use <code>&lt;aside&gt;</code> for content like sidebars, tips, or ads.</p>
+            </aside>
+
+            <figure>
+                <img src="https://via.placeholder.com/300x150" alt="Sample Image">
+                <figcaption>This is a placeholder image using the <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> tags.</figcaption>
+            </figure>
+        </section>
+        
+        <section id="media">
+            <h2>Embedded Media</h2>
+
+            
+            <h3>Audio Example</h3>
+            <audio controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            
+            <h3>Video Example</h3>
+            <video width="320" height="240" controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        
+        <section id="styles">
+            <h2>CSS Styling Methods</h2>
+
+            
+            <div style="background-color: lightblue; padding: 10px;">
+                <p>This <strong>div</strong> uses <em>inline style</em> to set background color and padding.</p>
+            </div>
+
+            
+            <div class="highlight">
+                This text is styled using an internal CSS class called <code>.highlight</code>.
+            </div>
+
+            
+            <div>
+                <p>External styles are typically stored in a separate <code>.css</code> file and linked using the <code>&lt;link&gt;</code> tag.</p>
+            </div>
+        </section>
+
+    </main>
+
+    
+    <footer>
+        <p>&copy; 2025 My Web Page. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
