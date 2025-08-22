@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JavaScript Demonstrations</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 50%;
+      margin-top: 20px;
+    }
+    table, th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>JavaScript Demonstrations</h1>
+
+  
+  <h2>Internal and External JavaScript</h2>
+
+  <p>Click the button to see internal JS alert:</p>
+  <button onclick="internalJS()">Internal JS Alert</button>
+
+  <p>Click the button to see external JS alert:</p>
+  <button onclick="externalJS()">External JS Alert</button>
+
+  
+  <h2>Different Ways to Display Output</h2>
+  <button onclick="displayOutput()">Display Output</button>
+
+  <div id="outputDiv" style="margin-top:10px; border: 1px solid #ccc; padding:10px;"></div>
+
+  
+  <h2>Different Ways to Take Input</h2>
+  <label for="inputBox">Enter your name:</label>
+  <input type="text" id="inputBox" placeholder="Your name" />
+  <button onclick="takeInput()">Submit</button>
+
+  <p id="inputResult"></p>
+
+  
+  <h2>Voter Eligibility Check</h2>
+  <button onclick="checkVoter()">Check Voter Eligibility</button>
+
+  <div id="voterResult"></div>
+
+  
+  <script src="external.js"></script>
+
+  <script>
+    
+    function internalJS() {
+      alert('Hello from internal JavaScript!');
+    }
+
+    
+    function displayOutput() {
+  
+      alert('Output using alert box');
+
+      
+      console.log('Output using console.log');
+
+      
+      const outputDiv = document.getElementById('outputDiv');
+      outputDiv.innerHTML = '<b>Output displayed inside this div.</b>';
+    }
+
+    
+    function takeInput() {
+      const inputVal = document.getElementById('inputBox').value;
+      document.getElementById('inputResult').innerText = 'You entered: ' + inputVal;
+    }
+
+    
+    function checkVoter() {
+      const name = prompt('Enter your name:');
+      let age = prompt('Enter your age:');
+
+      
+      age = Number(age);
+
+      if (!name || isNaN(age)) {
+        alert('Please enter valid name and age!');
+        return;
+      }
+
+      
+      const canVote = age >= 18 ? 'Yes' : 'No';
+
+      
+      const tableHTML = `
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Eligible to Vote?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>${name}</td>
+              <td>${age}</td>
+              <td>${canVote}</td>
+            </tr>
+          </tbody>
+        </table>
+      `;
+
+      document.getElementById('voterResult').innerHTML = tableHTML;
+    }
+  </script>
+</body>
+</html>
