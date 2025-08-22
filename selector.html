@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Selector Forms Demo</title>
+  <style>
+    
+    h1 {
+      color: navy;
+      font-family: Arial, sans-serif;
+    }
+
+    
+    #unique {
+      background-color: lightyellow;
+      padding: 10px;
+    }
+
+  
+    .highlight {
+      color: red;
+      font-weight: bold;
+    }
+
+    
+    p, li, span {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    
+    div p {
+      background-color: #f9f9f9;
+      padding: 5px;
+    }
+
+    
+    ul > li {
+      color: green;
+    }
+
+    
+    h2 + p {
+      font-style: italic;
+      color: purple;
+    }
+
+    
+    h2 ~ ul {
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    
+    a:hover {
+      color: orange;
+      text-decoration: underline;
+    }
+
+    li:first-child {
+      font-weight: bold;
+      color: blue;
+    }
+
+    input:focus {
+      border: 2px solid blue;
+      outline: none;
+    }
+
+    
+    p::first-letter {
+      font-size: 200%;
+      color: teal;
+    }
+
+    p::after {
+      content: " ✔";
+      color: green;
+      font-weight: bold;
+    }
+
+    
+    input[type="text"] {
+      background-color: #ffffcc;
+      padding: 5px;
+      border: 1px solid #aaa;
+    }
+
+    a[target="_blank"] {
+      color: crimson;
+      font-weight: bold;
+    }
+
+    [title] {
+      border-bottom: 1px dotted black;
+      cursor: help;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="unique">CSS Selector Forms</h1>
+
+  <p class="highlight" title="This is a highlighted paragraph.">This is a highlighted paragraph with a title attribute.</p>
+  <span>Here is a span element.</span>
+
+  <div>
+    <p>This paragraph is inside a div (descendant selector).</p>
+    <ul>
+      <li>List item 1 </li>
+      <li>List item 2</li>
+      <li>List item 3</li>
+    </ul>
+  </div>
+
+  <h2>Section Heading</h2>
+  <p>This paragraph immediately follows the h2 (adjacent sibling selector).</p>
+  <ul>
+    <li>Sibling list after h2 (general sibling selector)</li>
+  </ul>
+
+  <p>Click <a href="https://example.com" target="_blank" title="External link">this external link</a> to open in a new tab.</p>
+
+  <input type="text" placeholder="Text input (attribute selector)" />
+  <input type="password" placeholder="Password input" />
+
+</body>
+</html>
